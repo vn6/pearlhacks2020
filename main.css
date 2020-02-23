@@ -1,0 +1,30 @@
+body {
+    font-family: helvetica;
+    margin: 0;
+    background: #f3f3f3;
+}
+header {
+    background: white;
+    text-align: center;
+}
+.navigation {
+    padding: 10px 0 10px 0;
+    background: black;
+}
+.navLinks {
+    display: inline;
+    padding: 0px 30px 0px 30px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+#title {
+    font-size: 70px;
+    margin: auto;
+    padding: 40px;
+}
+div {
+    max-width: 600px;
+    margin: 0 auto;
+}
