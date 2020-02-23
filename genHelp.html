@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Crisis Help</title>
+        <link rel="stylesheet" href="main.css">
+<script src="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.css" />
+	    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+	
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.css" />
+    	    
+<script>
+	var firebaseConfig = {
+          apiKey: "AIzaSyCqEbjgGMv8PqumM8IGqWKSHWbKgfT_lQo",
+          authDomain: "pearlhacks2020-269022.firebaseapp.com",
+          databaseURL: "https://pearlhacks2020-269022.firebaseio.com",
+          projectId: "pearlhacks2020-269022",
+          storageBucket: "pearlhacks2020-269022.appspot.com",
+          messagingSenderId: "928809181787",
+          appId: "1:928809181787:web:fc090715993f5f0fb8157e",
+          measurementId: "G-3Z74V7EMEX"
+};
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
+
+	firebase.auth().onAuthStateChanged(function(user) {
+  	if (user) {
+		console.log("login success");
+		document.getElementById("login_out").innerHTML = "<a role='button' href = 'http://pearlhacks2020-269022.appspot.com/logout' class='btn btn-primary '>Log out </a>";
+  	} else {
+		console.log("not logged in");
+    		document.getElementById("login_out").innerHTML = "<a role='button' href = 'http://pearlhacks2020-269022.appspot.com/login'  class='btn btn-primary'>Log in </a>";
+  	}
+	});
+     </script>    
+</head>
+    <body>
+      	<nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+  <a class="navbar-brand" href="#">Crisis Alert</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="/views/messages.html">Pre-made Messages</a>
+      <a class="nav-item nav-link" href="/views/card.html">Crisis Card</a>
+      <a class="nav-item nav-link" href="/views/createCard.html">Create Card</a>
+      <a class="nav-item nav-link" href="/views/genHelp.html">General Help</a>
+    </div>
+  </div>
+  <div id="login_out"></div>
+</nav>
+        
+        <div>
+            
+        </div>
+    </body>
+</html>

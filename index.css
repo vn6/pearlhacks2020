@@ -1,0 +1,9 @@
+div {
+    text-align: center;
+}
+button {
+    display: inline;
+    padding: 40px 30px 40px 30px;
+    font-size: 40px;
+    margin: 10px;
+}
