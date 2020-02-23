@@ -26,4 +26,5 @@ a {
 div {
     max-width: 600px;
     margin: 25px 50px 75px;
+    padding: 10px;
 }
