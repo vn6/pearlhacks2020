@@ -1,6 +1,5 @@
 body {
     font-family: helvetica;
-    margin: 100px;
     background: #f3f3f3;
 }
 header {
@@ -26,5 +25,5 @@ a {
 }
 div {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 25px 50px 75px;
 }
