@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Crisis Help</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Crisis Help</h1>
+        <ul class="navigation">
+            <li class="navLinks"><a href="index.html">Pre-Made Messages</a></li>
+            <li class="navLinks"><a href="crisisCard.html">Crisis Card</a></li>
+            <li class="navLinks"><a href="generalHelp">General Help</a></li>
+            <li class="navLinks"><a href="aboutUs.html">About Us</a></li>
+        </ul>
+    </header>
+
+    <div>
+        <button onclick="playPause(document.getElementById('Ashdialogue'))" type="button">Message 1</button>
+        <button onclick="playPause(document.getElementById('Message2'))" type="button">Message 2</button>
+        <button onclick="playPause(document.getElementById('Message3'))" type="button">Message 3</button>
+        <button onclick="speak('Message 4')">Message 4</button>
+        <button onclick="speak('Message 5')">Message 5</button>
+        <button onclick="speak('Message 6')">Message 6</button>
+    </div>
+    <audio id="Ashdialogue" src="Ashdialogue.mp3" preload="auto" />
+    This text displays if the audio tag isn't supported.
+    </audio>
+    <audio id="Message2" src="Output2.mp3" preload="auto" />
+    This text displays if the audio tag isn't supported.
+    </audio>
+    <audio id="Message3" src="Output3.mp3" preload="auto" />
+    This text displays if the audio tag isn't supported.
+    </audio>
+    <script>
+        src = "trial.js"
+
+        function playPause(x) {
+            if (x.paused)
+                x.play();
+            else
+                x.pause();
+        }
+    </script>
+
+
+
+</body>
+
+</html>
