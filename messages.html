@@ -6,7 +6,9 @@
     <title>Crisis Help</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="index.css">
-	<script src="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	
+<script src="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.css" />
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -67,14 +69,6 @@
     </div>
     <div id="login_out"></div>
   </nav>
-
-    <div>
-        <button onclick="playPause(document.getElementById('Ashdialogue'))" type="button">Message 1</button>
-        <button onclick="playPause(document.getElementById('Message2'))" type="button">Message 2</button>
-        <button onclick="playPause(document.getElementById('Message3'))" type="button">Message 3</button>
-        <button onclick="playPause(document.getElementById('Message4'))" type="button">Message 3</button>
-
-    </div>
     <audio id="Ashdialogue" src="Ashdialogue.mp3" preload="auto" />
     This text displays if the audio tag isn't supported.
     </audio>
@@ -87,8 +81,14 @@
     <audio id="Message3" src="Output4.mp3" preload="auto" />
     This text displays if the audio tag isn't supported.
     </audio>
+    <div>
+        <button onclick="playPause(document.getElementById('Ashdialogue'))" type="button">Message 1</button>
+        <button onclick="playPause(document.getElementById('Message2'))" type="button">Message 2</button>
+        <button onclick="playPause(document.getElementById('Message3'))" type="button">Message 3</button>
+        <button onclick="playPause(document.getElementById('Message4'))" type="button">Message 3</button>
+
+    </div>
     <script>
-        src = "trial.js"
 
         function playPause(x) {
             if (x.paused)
